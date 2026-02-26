@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0  ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Criamos no :root, ou seja, no escopo global de um código, agumas variáveis, POR EXEMPLO: --cor-primaria: #000000 esse valor é a cor PRETA. Toda vez que chamarmos pelo nome "var(--cor-primaria);", iremos obter como retorno a cor preta. E dessa forma acontecerá com as outras variaveis!*/
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+.img {
+    width: 50%;
+    border-radius: 10%;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box; 
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 12%; /* ordem dos valores do padding primeiro é o valor de 2% é o superior, segundo é o valor de 0% é o direito o terceiro é o valor de 0% é o inferior e o quarto é o valor de 12% é o esquerdo */
+
+
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 3% 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.apresentacao__conteudo_titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    margin: 2%;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+    font-weight: bold;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.375rem;
+    font-family: var(--fonte-secundaria);
+    margin: 2%;
+}
+
+.apresentacao__links {
+    display: flex; /*coloca os itens alinhados lado a lado*/
+    flex-direction: column; /*muda a posição dos itens para columa*/
+    justify-content: space-between; /**/
+    align-items: center; /*centraliza os itens na pagina*/
+    gap: 32px; /*determina o espaçamento dos itens do mesmo containers*/
+}
+
+.apresentacao__links__subtitulos{
+    font-family: var(--fonte-principal);
+    font-weight: 300;
+    font-size: 1.875rem;
+
+}
+
+.apresentacao__links_navegacao {
+
+    /*background-color: #22d4fd;*/
+    display: flex; /* esse atributo nos permite utilizar um css flexbox no container selecionado */
+    align-items: center; /* esse atributo nos permite alinha a imagem de icone ou imagem mesmo ao texto */
+    justify-content: center; /* esse atributo centraliza todo o coteudo dentro do botao ou container  */
+    gap: 16px; /* esse atributo controla o espaçamento entre logo ou imagem do botao e o texto */
+    border: 2px solid var(--cor-terciaria); /* esse atributo controa a espessura da borda do botao e a cor da borda */
+    width: 50%; /* esse atributo modifica a largura do botao */
+    font-family: var(--fonte-secundaria); /* esse atributo seleciona a fonte da escrita do botao */
+    text-align: center; /* esse atributo centraliza o texto do botao */
+    color: var(--cor-secundaria); /* esse atributo controla a cor da escrita do botao */
+    border-radius: 16px; /* esse atributo controla o raio das bordas do botao ou de uma imagem */
+    font-size: 1.5rem; /* esse atributo controla o tamanho da fonte */
+    font-weight: 600; /* esse atributo controla o peso da fonte a espessura da letra */
+    padding: 17px 0; /* esse atributo nos permite controlar o tamanho da margem ou espaçamento do nome do botao e sua margem */
+    text-decoration: none; /* esse atributo deixa o nome do link sem o sublinhado */
+}
+
+.apresentacao__links_navegacao:hover { /* Adicionando o atributo ":HOVER" ao final da classe adicionamos a funcao de mudar a cor, a letra o icone oque nos adicionarmos dentro da classe ao passar o mouse em cima */
+    background-color: var(--cor-hover);
+}
+
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+}
+
