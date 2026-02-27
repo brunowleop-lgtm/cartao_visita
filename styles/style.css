@@ -33,7 +33,7 @@ h1 {
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 12%; /* ordem dos valores do padding primeiro é o valor de 2% é o superior, segundo é o valor de 0% é o direito o terceiro é o valor de 0% é o inferior e o quarto é o valor de 12% é o esquerdo */
+    padding: 2% 0% 0% 12%; /* Paddind e o espaçamento das bordas e a ordem dos valores do padding primeiro é o valor de 2% é o superior, segundo é o valor de 0% é o direito o terceiro é o valor de 0% é o inferior e o quarto é o valor de 12% é o esquerdo */
 
 
 }
@@ -52,7 +52,7 @@ h1 {
 }
 
 .apresentacao {
-    padding: 3% 11%;
+    padding: 3% 11%; /* Quando o padding so possuir dois valores igual a este o primeiro valor de 3% representa o espaçamento superior e inferior e o segundo valor de 11% representa as larguras direita e esqerda */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -131,9 +131,24 @@ h1 {
     font-weight: 400;
 }
 
+/* @media é uma propriedade que faz a alteração da tele visual do site quando o tamanho minimo de tela e atingido ou a quebra do layout, os famosos Break Points, no caso a medida esta entre parenteses expressando a condição se oque esta entrese parentese for verdadeiro a atribuição entre chaves será aplicado (max-width: 1200px). Dentro das chaves precisamos colocar o nome da classe declarada abre chaves novamente e colocamos a atribuiçao a ser executada.*/
 @media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
     .apresentacao {
         flex-direction: column-reverse;
+        padding: 5%;
     }
+
+    .apresentacao__conteudo {
+        width: auto; /* o atributo auto deixa a pagina prenxer o espaço total do conteudo sozinho nesse caso o testo da pagina. No vídeo o Gui e a Rafa definiram uma largura automática para a seção "apresentação conteúdo” com o width: auto;, existe outra forma de fazer isso que é muito utilizada na versão mobile. R: width: 100%;. Dessa forma, aplicando 100% na largura da página responsiva, ela vai ter o mesmo resultado que o width: auto; e vai acompanhar o tamanho da tela de forma automática.*/
+    }
+    
 }
 
